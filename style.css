@@ -1,3 +1,87 @@
 body {
-    background-color: blue;
+    background: linear-gradient(rgb(193, 123, 111), rgb(105, 86, 108));
+    font-family: 'Indie Flower', cursive;
+    font-size: 24px;
+    color: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+summary {
+    list-style: none;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.accordion {
+    box-shadow: 40px rgba(0, 0, 0, 0.208);
+    width: 82vh;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.item_first {
+    background-color: #f8b195;
+}
+.item_second {
+    background-color: #f67280;
+}
+.item_third {
+    background-color: #cd6c84;
+}
+.item_four {
+    background-color: #6c5b7b;
+}
+.item_five {
+    background-color: #355c7d;
+}
+.accordion__item {
+    transition: 0.3s ease-in-out;
+}
+
+.accordion__title {
+    width: 100%;
+    cursor: pointer;
+    padding: 10px 10px 10px 20px;
+    transition: 0.3s all;
+    position: relative;
+}
+
+.accordion__title:hover {
+    background-color:rgb(105, 86, 108);
+}
+
+img {
+    width: 50vh;
+    display: block;
+    margin: 0 auto;
+    transition: 0.3s ease-in-out;
+}
+
+
+.memes{
+    padding: 10px;
+    margin: 0 auto;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.accordion__item[open] .memes{
+    animation: slide .4s ease-in-out;
+}
+
+
+@keyframes slide {
+    0%    {opacity: 0; transform:  translate(0, -20px); }
+    100%  {opacity: 1; transform:  translate(0, 0);}
 }
