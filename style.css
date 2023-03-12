@@ -57,6 +57,7 @@ summary {
     position: relative;
 }
 
+
 .accordion__title:hover {
     background-color:rgb(105, 86, 108);
 }
@@ -68,9 +69,12 @@ img {
     transition: 0.3s ease-in-out;
 }
 
+.memes:hover {
+    transform: scale(1.1);
+}
 
 .memes{
-    padding: 10px;
+    padding: 10px 10px 30px;
     margin: 0 auto;
     transition: 0.3s ease-in-out;
     cursor: pointer;
@@ -84,4 +88,56 @@ img {
 @keyframes slide {
     0%    {opacity: 0; transform:  translate(0, -20px); }
     100%  {opacity: 1; transform:  translate(0, 0);}
+}
+
+
+.close {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 25%;
+    font-size: 20px;
+    transform: rotate(45deg);
+    transition: 0.5s ease-in-out;
+}
+.accordion__item[open] .close{
+    display: block;
+    transform: rotate(0deg);
+}
+
+@media all and (max-width: 820px) {
+    body {
+        font-size: 20px;
+    }
+    .close {
+        font-size: 15px;
+    }
+    .accordion {
+        width: 90vh;
+    }
+}
+
+@media all and (max-width: 404px) {
+    body {
+        font-size: 20px;
+    }
+    .close {
+        font-size: 15px;
+    }
+    .accordion {
+        width: 75vh;
+    }
+}
+
+@media all and (max-width: 320px) {
+    body {
+        font-size: 15px;
+    }
+    .close {
+        font-size: 12px;
+    }
+    .accordion {
+        width: 70vh;
+    }
 }
